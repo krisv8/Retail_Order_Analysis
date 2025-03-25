@@ -47,11 +47,12 @@ with tab1.container():
         query_sql = details[input]
 
         mydb = mysql.connector.connect(
-                host = "localhost",
-                user = "root",
-                password = "",
-                database='Order_Details',
-                autocommit = True)
+                host = "gateway01.eu-central-1.prod.aws.tidbcloud.com",
+                port = 4000,
+                user = "2Rz5gorbBBfaznn.root",
+                password = "8IMZ7pQSbiMrYh83",
+                database = "Order_Details"
+                )
         mycursor = mydb.cursor()
         mycursor.execute(query_sql)
         result = mycursor.fetchall()
@@ -109,11 +110,12 @@ with tab2.container():
         query_sql = detail[inputs]
 
         mydb = mysql.connector.connect(
-                host = "localhost",
-                user = "root",
-                password = "",
-                database='Order_Details',
-                autocommit = True)
+                host = "gateway01.eu-central-1.prod.aws.tidbcloud.com",
+                port = 4000,
+                user = "2Rz5gorbBBfaznn.root",
+                password = "8IMZ7pQSbiMrYh83",
+                database = "Order_Details"
+                )
         mycursor = mydb.cursor()
         mycursor.execute(query_sql)
         result = mycursor.fetchall()
